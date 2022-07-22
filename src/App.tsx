@@ -1,24 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import './index.css';
+import Resume from './components/Resume';
+import { Switch, theme } from '@nextui-org/react';
+import { SunIcon } from './assets/SunIcon';
+import { MoonIcon } from './assets/MoonIcon';
+import { ThemeContext } from './themeContext';
 
 function App() {
+  // const setTheme = useTheme();
+  const themeContext = React.useContext(ThemeContext);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{
+      backgroundColor: themeContext?.props.colors.background.value
+    }}>
+      {themeContext?.theme}
+      {/* {console.log(themeContext?.props)} */}
+      <Switch
+        checked={themeContext?.theme === "dark"}
+        size="lg"
+        iconOn={<MoonIcon filled fill={themeContext?.props.colors.foreground.value}/>}
+        iconOff={<SunIcon filled />}
+        onChange={() => {themeContext?.toggleTheme()}}
+      />
+      <Resume />
     </div>
   );
 }
