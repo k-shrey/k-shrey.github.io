@@ -1,14 +1,25 @@
 import React from "react";
 
 import { CompanyType } from "../../types/WorkExpTypes";
+import { MapIcon } from "../../assets/MapIcon";
+import { ThemeContext } from "../../themeContext";
 
-export default function Company({ name, position, startDate, endDate, description }:
+export default function Company({ name, position, startDate, endDate, description, location }:
     Omit<CompanyType, 'projects'>) {
+    const themeContext = React.useContext(ThemeContext);
     return (
-        <div className="sm:max-w-[250px] w-[90vw] break-normal">
-            <div className="sticky top-0">
+        <div className="sm:max-w-[250px] break-normal">
+            <div className="sticky top-4">
                 <div className="text-lg font-semibold">
                     {name}
+                </div>
+                <div className="flex flex-row mt-1 text-sm italic">
+                    <span className="inline-flex">
+                        <MapIcon filled fill={themeContext?.theme.colors.accentColor} size={20} />
+                    </span>
+                    <div className="inline-flex ml-1">
+                        {location}
+                    </div>
                 </div>
                 <div className="text-sm mt-2">
                     {startDate} ~ {endDate.length > 0 ? endDate : "present"}

@@ -1,7 +1,7 @@
 import { IconProps } from '../types/Icons';
 
 export const MoonIcon = ({
-  fill = "currentColor",
+  fill = "currColor",
   filled,
   size,
   height,

@@ -3,30 +3,22 @@ import useLocalStorage from 'use-local-storage';
 import { darkTheme, lightTheme, ThemeType } from './assets/CustomTheme';
 
 const ThemeContext = React.createContext<ThemeContextInterface | null>(null);
-type ThemeChoice = 'dark' | 'light';
-// type ThemeType = typeof darkTheme;
-
 interface ThemeContextInterface {
-    theme: ThemeChoice;
+    theme: ThemeType;
     toggleTheme: () => void;
-    props: ThemeType;
 }
 
 const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
     // get theme preference from browser
     const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const [theme, setTheme] = useLocalStorage<ThemeChoice>('theme',
-        defaultDark ? 'dark' : 'light');
-    
+    const [theme, setTheme] = useLocalStorage<ThemeType>('theme',
+        defaultDark ? darkTheme : lightTheme);
     const toggleTheme = () => {
-        setTheme(theme === 'dark' ? 'light' : 'dark');
-        
+        setTheme(theme?.type === 'dark' ? lightTheme : darkTheme)
     };
 
-    const props = myLightTheme;
-
     return (
-        <ThemeContext.Provider value={{ theme, toggleTheme, props }}>
+        <ThemeContext.Provider value={{ theme, toggleTheme}}>
             {children}
         </ThemeContext.Provider>
     )
@@ -34,5 +26,5 @@ const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
 
 export { ThemeContext, ThemeProvider };
 
-export type { ThemeContextInterface, ThemeChoice };
+export type { ThemeContextInterface };
 

@@ -2,12 +2,16 @@ import React from "react";
 
 import { ProjectType } from "../../types/WorkExpTypes";
 import Badge from "./Badge";
+import { ThemeContext } from "../../themeContext";
+// import "../../static/role.css";
 
-export default function Role({ title, description, startDate, endDate, which, techStack}:
+
+export default function Role({ title, description, startDate, endDate, which, techStack }:
     ProjectType) {
+    const themeContext = React.useContext(ThemeContext);
 
     return (
-        <div className="ml-2 max-w-[90%] sm:max-w-[350px]">
+        <div className="ml-1 sm:max-w-[350px] last:-mb-7">
             <div className="text-lg font-semibold">
                 {title.text}
             </div>
@@ -17,10 +21,12 @@ export default function Role({ title, description, startDate, endDate, which, te
             <div className="text-sm sm:text-base font-light mt-0">
                 {description}
             </div>
-            <ul className="list-disc text-sky-500">
+            <ul className="list-disc" style={{ color: themeContext?.theme.colors.accentColor}}>
                 {which.map((task, i) => (
-                    <li key={i} className="text-sm">
-                        <div className="text-black">
+                    <li key={i} className="text-sm -ml-1">
+                        <div style={{
+                            color: themeContext?.theme.colors.primary
+                        }}>
                             {task}
                         </div>
                     </li>

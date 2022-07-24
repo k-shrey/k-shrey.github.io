@@ -2,29 +2,24 @@ import React from 'react';
 import './App.css';
 import './index.css';
 import Resume from './components/Resume';
-import { Switch, theme } from '@nextui-org/react';
-import { SunIcon } from './assets/SunIcon';
-import { MoonIcon } from './assets/MoonIcon';
 import { ThemeContext } from './themeContext';
+import Footer from './components/Footer';
+import Navbar from './components/Navbar';
 
 function App() {
-  // const setTheme = useTheme();
   const themeContext = React.useContext(ThemeContext);
 
   return (
-    <div style={{
-      backgroundColor: themeContext?.props.colors.background.value
-    }}>
-      {themeContext?.theme}
-      {/* {console.log(themeContext?.props)} */}
-      <Switch
-        checked={themeContext?.theme === "dark"}
-        size="lg"
-        iconOn={<MoonIcon filled fill={themeContext?.props.colors.foreground.value}/>}
-        iconOff={<SunIcon filled />}
-        onChange={() => {themeContext?.toggleTheme()}}
-      />
-      <Resume />
+    <div className=''
+      style={{
+        backgroundColor: themeContext?.theme.colors.secondary,
+        color: themeContext?.theme.colors.primary
+      }}>
+      <div className="block p-1 max-w-[700px] mx-auto mb-5">
+        <Navbar />
+        <Resume />
+      </div>
+      <Footer />
     </div>
   );
 }

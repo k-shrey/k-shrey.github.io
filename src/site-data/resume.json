@@ -6,7 +6,8 @@
         "position": "Web Developer",
         "startDate": "2021.03",
         "endDate": "",
-        "description": "Foo company is social media company for every world",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit",
+        "location": "Foo Bar, FB",
         "projects": [
           {
             "title": {
@@ -22,9 +23,9 @@
           },
           {
             "title": {
-              "text": "Comet land",
-              "githubLink": "https://github.com/hyesungoh/comet-land",
-              "otherLink": "https://comet-land-blog.vercel.app"
+              "text": "Comet Lorem ipsum dolor sit ",
+              "githubLink": "",
+              "otherLink": ""
             },
             "description": "Monorepo for blog and resume",
             "startDate": "2021.6",
@@ -42,11 +43,11 @@
             "startDate": "2021.03",
             "endDate": "2021.06",
             "which": [
-              "develop comet-land",
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit",
               "lorem lorem",
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum iusto quasi alias provident quos perspiciatis modi dolores libero tenetur nam?"
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. "
             ],
-            "techStack": null
+            "techStack": ["TypeScript", "React", "Next.js"]
           }
         ]
       },
@@ -55,7 +56,8 @@
         "position": "Web Developer",
         "startDate": "2020.03",
         "endDate": "2021.03",
-        "description": "Bar company is very awesome",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum iusto quasi alias",
+        "location": "Foo Bar, FB",
         "projects": [
           {
             "title": {
