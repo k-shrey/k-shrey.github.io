@@ -1,0 +1,21 @@
+/* li {
+    padding-left: 1em; 
+    text-indent: -.7em;
+}
+
+li::before {
+    content: "\002022";
+    color: "blue";
+} */
+
+/* .custom-text-fill-transparent {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+} */
+
+.custom-gradient {
+    /* background: -webkit-linear-gradient(#eee, #333); */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

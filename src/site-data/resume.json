@@ -1,0 +1,68 @@
+{
+    "title": "Work Experience",
+    "items": [
+      {
+        "name": "Amazon",
+        "position": "Software Development Engineer",
+        "startDate": "Nov 2022",
+        "endDate": "",
+        "description": "",
+        "location": "Luxembourg City, Luxembourg",
+        "projects": [
+          {
+            "title": {
+              "text": "FaaST",
+              "githubLink": null,
+              "otherLink": null
+            },
+            "description": "Building next-gen Fulfillment-as-a-Service applications for Amazon warehouses across the world",
+            "startDate": "Nov 2022",
+            "endDate": "",
+            "which": [],
+            "techStack": ["React", "DynamoDB", "Lambda", "TypeScript"]
+          }
+        ]
+      },
+      {
+        "name": "ICICI Lombard",
+        "position": "Software Developer",
+        "startDate": "Aug 2021",
+        "endDate": "Oct 2022",
+        "description": "",
+        "location": "Bangalore, India",
+        "projects": [
+          {
+            "title": {
+              "text": "NinjaCRM Outbound",
+              "githubLink": null,
+              "otherLink": null
+            },
+            "description": "Insurance purchase portal",
+            "startDate": "Aug 2021",
+            "endDate": "Oct 2022",
+            "which": [
+              "Serving 50,000 customers/month",
+              "Generating a revenue of 1 million USD/month"
+            ],
+            "techStack": ["AWS", "TypeScript", "React", "Laravel"]
+          },
+          {
+            "title": {
+              "text": "NinjaCRM Telephony",
+              "githubLink": null,
+              "otherLink": null
+            },
+            "description": "Softphone dialing feature",
+            "startDate": "Aug 2021",
+            "endDate": "Oct 2022",
+            "which": [
+              "Drastically improved efficiency by offering 1-click dialing",
+              "Improves recall and auditing with a call recording feature that links to leads"
+            ],
+            "techStack": ["Go", "FreeSWITCH", "Laravel"]
+          }
+        ]
+      }
+    ]
+  }
+  

@@ -1,24 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import './index.css';
+import Resume from './components/Resume';
+import { ThemeContext } from './themeContext';
+import Footer from './components/Footer';
+import Navbar from './components/Navbar';
 
 function App() {
+  const themeContext = React.useContext(ThemeContext);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className=''
+      style={{
+        backgroundColor: themeContext?.theme.colors.secondary,
+        color: themeContext?.theme.colors.primary
+      }}>
+      <div className="block p-1 max-w-[700px] mx-auto mb-5">
+        <Navbar />
+        <Resume />
+      </div>
+      <Footer />
     </div>
   );
 }
