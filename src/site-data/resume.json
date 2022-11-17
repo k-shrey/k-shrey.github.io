@@ -15,11 +15,11 @@
               "githubLink": null,
               "otherLink": null
             },
-            "description": "Building next-gen Fulfillment-as-a-Service applications for Amazon warehouses across the world",
+            "description": "Building next-gen Fulfillment-as-a-Service applications for warehouses around the world",
             "startDate": "Nov 2022",
             "endDate": "",
             "which": [],
-            "techStack": ["React", "DynamoDB", "Lambda", "TypeScript"]
+            "techStack": ["Spring", "AWS"]
           }
         ]
       },
